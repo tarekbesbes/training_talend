@@ -1,1 +1,16 @@
-[ ]
+[ {
+  "baseItem" : {
+    "id" : "_sP1xkOdHEfGvbs5hnEDAPg",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_edwXMOdGEfGvbs5hnEDAPg",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_-fbfwOdNEfGvbs5hnEDAPg - caisse_metadata",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+} ]
