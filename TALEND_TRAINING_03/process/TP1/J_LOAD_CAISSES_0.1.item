@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
-  <context confirmationNeeded="false" hide="false" name="Default"/>
+  <context confirmationNeeded="false" hide="false" name="Default">
+    <contextParameter comment="" name="FileDirectory" prompt="FileDirectory?" promptNeeded="false" repositoryContextId="_Qlv68OgJEfGvbs5hnEDAPg" type="id_String" value="" internalId="_fyZSAOgOEfGvbs5hnEDAPg"/>
+    <contextParameter comment="" name="CNX_SNOWFLAKE_dbSchema" prompt="CNX_SNOWFLAKE_dbSchema?" promptNeeded="false" repositoryContextId="_EC99kOgOEfGvbs5hnEDAPg" type="id_String" value="" internalId="_OSO8AOgQEfGvbs5hnEDAPg"/>
+    <contextParameter comment="" name="CNX_SNOWFLAKE_password" prompt="CNX_SNOWFLAKE_password?" promptNeeded="false" repositoryContextId="_EC99kOgOEfGvbs5hnEDAPg" type="id_Password" value="" internalId="_OSO8AegQEfGvbs5hnEDAPg"/>
+    <contextParameter comment="" name="CNX_SNOWFLAKE_database" prompt="CNX_SNOWFLAKE_database?" promptNeeded="false" repositoryContextId="_EC99kOgOEfGvbs5hnEDAPg" type="id_String" value="" internalId="_OSO8AugQEfGvbs5hnEDAPg"/>
+    <contextParameter comment="" name="CNX_SNOWFLAKE_jdbcParameters" prompt="CNX_SNOWFLAKE_jdbcParameters?" promptNeeded="false" repositoryContextId="_EC99kOgOEfGvbs5hnEDAPg" type="id_String" value="" internalId="_OSO8A-gQEfGvbs5hnEDAPg"/>
+    <contextParameter comment="" name="CNX_SNOWFLAKE_userId" prompt="CNX_SNOWFLAKE_userId?" promptNeeded="false" repositoryContextId="_EC99kOgOEfGvbs5hnEDAPg" type="id_String" value="" internalId="_OSO8BOgQEfGvbs5hnEDAPg"/>
+    <contextParameter comment="" name="CNX_SNOWFLAKE_warehouse" prompt="CNX_SNOWFLAKE_warehouse?" promptNeeded="false" repositoryContextId="_EC99kOgOEfGvbs5hnEDAPg" type="id_String" value="" internalId="_OSO8BegQEfGvbs5hnEDAPg"/>
+    <contextParameter comment="" name="CNX_SNOWFLAKE_jdbcUrlSuffix" prompt="CNX_SNOWFLAKE_jdbcUrlSuffix?" promptNeeded="false" repositoryContextId="_EC99kOgOEfGvbs5hnEDAPg" type="id_String" value="" internalId="_OSO8BugQEfGvbs5hnEDAPg"/>
+    <contextParameter comment="" name="CNX_SNOWFLAKE_loginTimeout" prompt="CNX_SNOWFLAKE_loginTimeout?" promptNeeded="false" repositoryContextId="_EC99kOgOEfGvbs5hnEDAPg" type="id_String" value="" internalId="_OSO8B-gQEfGvbs5hnEDAPg"/>
+    <contextParameter comment="" name="CNX_SNOWFLAKE_role" prompt="CNX_SNOWFLAKE_role?" promptNeeded="false" repositoryContextId="_EC99kOgOEfGvbs5hnEDAPg" type="id_String" value="" internalId="_OSO8COgQEfGvbs5hnEDAPg"/>
+    <contextParameter comment="" name="CNX_SNOWFLAKE_account" prompt="CNX_SNOWFLAKE_account?" promptNeeded="false" repositoryContextId="_EC99kOgOEfGvbs5hnEDAPg" type="id_String" value="" internalId="_OSO8CegQEfGvbs5hnEDAPg"/>
+  </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
@@ -99,42 +111,41 @@
     <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
     <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
   </parameters>
-  <node componentName="SnowflakeConnection" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="200" posY="120">
+  <node componentName="SnowflakeConnection" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="400" posY="240">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBConnection_1" show="false"/>
     <elementParameter field="TEXT" name="COMPONENT_NAME" value="SnowflakeConnection" show="false"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNJbnB1dAConnection" show="false"/>
     <elementParameter field="TEXT" name="VERSION" value="1" show="false"/>
     <elementParameter field="TEXT" name="FAMILY" value="Snowflake" show="false"/>
-    <elementParameter field="CHECK" name="START" value="true" show="false"/>
+    <elementParameter field="CHECK" name="START" value="false" show="false"/>
     <elementParameter field="CHECK" name="STARTABLE" value="true" show="false"/>
     <elementParameter field="CHECK" name="SUBTREE_START" value="true" show="false"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" value="true" show="false"/>
     <elementParameter field="TEXT" name="HELP" value="HELP" show="false"/>
     <elementParameter field="DIRECTORY" name="IREPORT_PATH" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_edwXMOdGEfGvbs5hnEDAPg"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="TEXT" name="configuration.account" value="&quot;ypjmbkc-xm45646&quot;"/>
+    <elementParameter field="TEXT" name="LABEL" value="TestConnection"/>
+    <elementParameter field="TEXT" name="configuration.account" value="context.CNX_SNOWFLAKE_account"/>
     <elementParameter field="CLOSED_LIST" name="configuration.snowflakeAuth.authenticationType" value="BASIC"/>
-    <elementParameter field="TEXT" name="configuration.snowflakeAuth.userId" value="&quot;TBESBES23&quot;"/>
-    <elementParameter field="PASSWORD" name="configuration.snowflakeAuth.password" value="enc:system.encryption.key.v1:O/p7tkVytMAv+grYkOvrPNtA3DqXLxDAOX4J1UVRxua3AGC1NoteC5fziPpzCA=="/>
+    <elementParameter field="TEXT" name="configuration.snowflakeAuth.userId" value="context.CNX_SNOWFLAKE_userId"/>
+    <elementParameter field="PASSWORD" name="configuration.snowflakeAuth.password" value="context.CNX_SNOWFLAKE_password"/>
     <elementParameter field="TEXT" name="configuration.snowflakeAuth.keyAlias" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="configuration.snowflakeAuth.oauthTokenEndpoint" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="configuration.snowflakeAuth.clientId" value="&quot;&quot;" show="false"/>
     <elementParameter field="CLOSED_LIST" name="configuration.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
     <elementParameter field="TEXT" name="configuration.snowflakeAuth.oauthUsername" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="configuration.snowflakeAuth.scope" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="configuration.warehouse" value="&quot;COMPUTE_WH&quot;"/>
-    <elementParameter field="TEXT" name="configuration.dbSchema" value="&quot;TALEND_SCHEMA&quot;"/>
-    <elementParameter field="TEXT" name="configuration.database" value="&quot;TALEND_TRAINING&quot;"/>
+    <elementParameter field="TEXT" name="configuration.warehouse" value="context.CNX_SNOWFLAKE_warehouse"/>
+    <elementParameter field="TEXT" name="configuration.dbSchema" value="context.CNX_SNOWFLAKE_dbSchema"/>
+    <elementParameter field="TEXT" name="configuration.database" value="context.CNX_SNOWFLAKE_database"/>
     <elementParameter field="CHECK" name="configuration.shareConnection" value="false"/>
     <elementParameter field="CHECK" name="configuration.autoCommit" value="true"/>
-    <elementParameter field="TEXT" name="configuration.jdbcParameters" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="configuration.loginTimeout" value="15"/>
-    <elementParameter field="TEXT" name="configuration.role" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="configuration.jdbcUrlSuffix" value="&quot;.snowflakecomputing.com&quot;"/>
+    <elementParameter field="TEXT" name="configuration.jdbcParameters" value="context.CNX_SNOWFLAKE_jdbcParameters"/>
+    <elementParameter field="TEXT" name="configuration.loginTimeout" value="context.CNX_SNOWFLAKE_loginTimeout"/>
+    <elementParameter field="TEXT" name="configuration.role" value="context.CNX_SNOWFLAKE_role"/>
+    <elementParameter field="TEXT" name="configuration.jdbcUrlSuffix" value="context.CNX_SNOWFLAKE_jdbcUrlSuffix"/>
     <elementParameter field="TECHNICAL" name="configuration.__version" value="-1" show="false"/>
     <elementParameter field="TEXT" name="___TACOKIT_COMPONENT_PLUGIN_NAME___" value="snowflake" show="false"/>
     <metadata connector="FLOW" name="tDBConnection_1"/>
@@ -142,7 +153,7 @@
     <metadata connector="MERGE" name="MERGE"/>
     <metadata connector="REJECT" name="REJECT"/>
   </node>
-  <node componentName="tDie" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="400" posY="120">
+  <node componentName="tDie" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="600" posY="240">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_1" show="false"/>
     <elementParameter field="TEXT" name="COMPONENT_NAME" value="tDie" show="false"/>
     <elementParameter field="TEXT" name="VERSION" value="0.102 (ALPHA)" show="false"/>
@@ -154,14 +165,15 @@
     <elementParameter field="TEXT" name="HELP" value="org.talend.help.tDie" show="false"/>
     <elementParameter field="DIRECTORY" name="IREPORT_PATH" value="" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Users\dhhf2167\Downloads\Talend-Studio-20250226_1030-V8.0.1\Talend-Studio-20250226_1030-V8.0.1\configuration\lib\java" show="false"/>
-    <elementParameter field="TEXT" name="MESSAGE" value="&quot;the end is near&quot;"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Test connection KO &quot; + ((String)globalMap.get(&quot;tDBConnection_1_ERROR_MESSAGE&quot;))"/>
     <elementParameter field="TEXT" name="CODE" value="4"/>
     <elementParameter field="CLOSED_LIST" name="PRIORITY" value="5"/>
     <elementParameter field="CHECK" name="EXIT_JVM" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="ErrorConnection"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDie_1"/>
   </node>
-  <node componentName="SnowflakeClose" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="200" posY="480">
+  <node componentName="SnowflakeClose" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="400" posY="600">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBClose_1" show="false"/>
     <elementParameter field="TEXT" name="COMPONENT_NAME" value="SnowflakeClose" show="false"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNJbnB1dAClose" show="false"/>
@@ -176,6 +188,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="LABEL" value="CloseConnection"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
     <elementParameter field="TECHNICAL" name="configuration.__version" value="-1" show="false"/>
     <elementParameter field="TEXT" name="___TACOKIT_COMPONENT_PLUGIN_NAME___" value="snowflake" show="false"/>
@@ -184,7 +197,7 @@
     <metadata connector="MERGE" name="MERGE"/>
     <metadata connector="REJECT" name="REJECT"/>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="680" posY="120">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="240">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1" show="false"/>
     <elementParameter field="TEXT" name="COMPONENT_NAME" value="tLogRow" show="false"/>
     <elementParameter field="TEXT" name="VERSION" value="0.101 (ALPHA)" show="false"/>
@@ -248,7 +261,7 @@
       <column comment="" key="false" length="1" name="remise_pct" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="200" posY="320">
+  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="400" posY="440">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_1" show="false"/>
     <elementParameter field="TEXT" name="COMPONENT_NAME" value="tFileList" show="false"/>
     <elementParameter field="TEXT" name="VERSION" value="0.102 (ALPHA)" show="false"/>
@@ -260,7 +273,7 @@
     <elementParameter field="TEXT" name="HELP" value="org.talend.help.tFileList" show="false"/>
     <elementParameter field="DIRECTORY" name="IREPORT_PATH" value="" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Users\dhhf2167\Downloads\Talend-Studio-20250226_1030-V8.0.1\Talend-Studio-20250226_1030-V8.0.1\configuration\lib\java" show="false"/>
-    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;C:/Users/dhhf2167/Downloads/module2_sources_brutes/module2_sources_brutes/caisses&quot;"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="context.FileDirectory"/>
     <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
     <elementParameter field="CHECK" name="INCLUDSUBDIR" value="false"/>
     <elementParameter field="CLOSED_LIST" name="CASE_SENSITIVE" value="YES"/>
@@ -280,7 +293,7 @@
     <elementParameter field="CHECK" name="FORMAT_FILEPATH_TO_SLASH" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="400" posY="320">
+  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="600" posY="440">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1" show="false"/>
     <elementParameter field="TEXT" name="COMPONENT_NAME" value="tFileInputDelimited" show="false"/>
     <elementParameter field="TEXT" name="VERSION" value="0.102 (ALPHA)" show="false"/>
@@ -297,7 +310,7 @@
     <elementParameter field="CHECK" name="USE_EXISTING_DYNAMIC" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="DYNAMIC" value="" show="false"/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
-    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/dhhf2167/Downloads/module2_sources_brutes/module2_sources_brutes/caisses/caisses_M01_20260301.csv&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.FileDirectory+&quot;/&quot;+((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)) "/>
     <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
     <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\n&quot;" show="false"/>
@@ -404,7 +417,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="600" posY="320">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="800" posY="440">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
     <elementParameter field="TEXT" name="COMPONENT_NAME" value="tMap" show="false"/>
     <elementParameter field="TEXT" name="VERSION" value="2.1 (ALPHA)" show="false"/>
@@ -428,35 +441,37 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="out">
-      <column comment="" key="false" length="6" name="ticket_id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="ticket_id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Long" usefulColumn="true"/>
       <column comment="" key="false" length="1" name="ligne_num" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="date_txt" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="date_txt" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="8" name="heure" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="1" name="magasin_id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="ville" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="4" name="client_id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="client_id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Long" usefulColumn="true"/>
       <column comment="" key="false" length="3" name="produit_id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="1" name="quantite" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="prix_unitaire" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="prix_unitaire" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="1" name="remise_pct" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="nom_fichier" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="charge_le" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var"/>
       <outputTables sizeState="INTERMEDIATE" name="out">
-        <mapperTableEntries name="ticket_id" expression="Long.valueOf(row1.ticket_id)" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ticket_id" expression="Long.valueOf(row1.ticket_id)" type="id_Long" nullable="true"/>
         <mapperTableEntries name="ligne_num" expression="Integer.valueOf(row1.ligne_num)" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="date_txt" expression="TalendDate.parseDate(&quot;dd/MM/yyyy&quot;, row1.date_txt)" type="id_String" nullable="true"/>
+        <mapperTableEntries name="date_txt" expression="TalendDate.parseDate(&quot;dd/MM/yyyy&quot;, row1.date_txt)" type="id_Date" nullable="true"/>
         <mapperTableEntries name="heure" expression="row1.heure " type="id_String" nullable="true"/>
         <mapperTableEntries name="magasin_id" expression="Integer.valueOf(row1.magasin_id)" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="ville" expression="StringHandling.UPCASE(row1.ville.trim())" type="id_String" nullable="true"/>
-        <mapperTableEntries name="client_id" expression="Relational.ISNULL(row1.client_id) || row1.client_id.isEmpty() ? null : Long.valueOf(row1.client_id) " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="client_id" expression="Relational.ISNULL(row1.client_id) || row1.client_id.isEmpty() ? null : Long.valueOf(row1.client_id) " type="id_Long" nullable="true"/>
         <mapperTableEntries name="produit_id" expression="Integer.valueOf(row1.produit_id)" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="quantite" expression="Integer.valueOf(row1.quantite)" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="prix_unitaire" expression="BigDecimal(row1.prix_unitaire.replace(&quot;,&quot;, &quot;.&quot;))" type="id_String" nullable="true"/>
+        <mapperTableEntries name="prix_unitaire" expression="new BigDecimal(row1.prix_unitaire.replace(&quot;,&quot;, &quot;.&quot;)) " type="id_BigDecimal" nullable="true"/>
         <mapperTableEntries name="remise_pct" expression="Integer.valueOf(row1.remise_pct)" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="nom_fichier" expression="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="charge_le" expression="TalendDate.getCurrentDate() " type="id_Date" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="ticket_id" type="id_String" nullable="true"/>
@@ -473,7 +488,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="1000" posY="320">
+  <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="1200" posY="440">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBOutput_1" show="false"/>
     <elementParameter field="TEXT" name="COMPONENT_NAME" value="Output" show="false"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNPdXRwdXQ" show="false"/>
@@ -484,24 +499,23 @@
     <elementParameter field="CHECK" name="END_OF_FLOW" value="true" show="false"/>
     <elementParameter field="TEXT" name="HELP" value="HELP" show="false"/>
     <elementParameter field="DIRECTORY" name="IREPORT_PATH" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_edwXMOdGEfGvbs5hnEDAPg"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.account" value="&quot;ypjmbkc-xm45646&quot;"/>
+    <elementParameter field="TEXT" name="LABEL" value="CAISSES"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.account" value="context.CNX_SNOWFLAKE_account"/>
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="BASIC"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.userId" value="&quot;TBESBES23&quot;"/>
-    <elementParameter field="PASSWORD" name="configuration.dataSet.dataStore.snowflakeAuth.password" value="enc:system.encryption.key.v1:YWqZi1fhaJ2RuOdsMImVc00aF1vPXWCzSSDGoTubsje5dgB4HAIzoEygJ6qikg=="/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.userId" value="context.CNX_SNOWFLAKE_userId"/>
+    <elementParameter field="PASSWORD" name="configuration.dataSet.dataStore.snowflakeAuth.password" value="context.CNX_SNOWFLAKE_password"/>
     <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.keyAlias" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.oauthTokenEndpoint" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.clientId" value="&quot;&quot;" show="false"/>
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
     <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.oauthUsername" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.scope" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.warehouse" value="&quot;COMPUTE_WH&quot;"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.dbSchema" value="&quot;TALEND_SCHEMA&quot;"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.database" value="&quot;TALEND_TRAINING&quot;"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.warehouse" value="context.CNX_SNOWFLAKE_warehouse"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.dbSchema" value="context.CNX_SNOWFLAKE_dbSchema"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.database" value="context.CNX_SNOWFLAKE_database"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
     <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="&quot;CAISSES&quot;"/>
     <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.tableAction" value="CREATE_IF_NOT_EXISTS"/>
@@ -509,10 +523,10 @@
     <elementParameter field="COLUMN_LIST" name="configuration.snowflakeOutputCommonConfig.upsertKeyColumn" value="ticket_id" show="false"/>
     <elementParameter field="CHECK" name="configuration.dieOnError" value="false"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcParameters" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="15"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.role" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value="&quot;.snowflakecomputing.com&quot;"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcParameters" value="context.CNX_SNOWFLAKE_jdbcParameters"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="context.CNX_SNOWFLAKE_loginTimeout"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.role" value="context.CNX_SNOWFLAKE_role"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value="context.CNX_SNOWFLAKE_jdbcUrlSuffix"/>
     <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.convertColumnsAndTableToUppercase" value="true"/>
     <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useSchemaKeysForUpsert" value="true" show="false"/>
     <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.enforceDatabaseSchema" value="false"/>
@@ -530,18 +544,19 @@
     <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1" show="false"/>
     <elementParameter field="TEXT" name="DATASTORE_PATH" value="configuration.dataSet.dataStore" show="false"/>
     <metadata connector="FLOW" name="tDBOutput_1">
-      <column comment="" key="false" length="6" name="ticket_id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="ticket_id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Long" usefulColumn="true"/>
       <column comment="" key="false" length="1" name="ligne_num" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="date_txt" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="date_txt" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="8" name="heure" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="1" name="magasin_id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="ville" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="4" name="client_id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="client_id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Long" usefulColumn="true"/>
       <column comment="" key="false" length="3" name="produit_id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="1" name="quantite" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="prix_unitaire" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="prix_unitaire" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="1" name="remise_pct" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="nom_fichier" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="charge_le" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="LOOKUP" name="LOOKUP">
       <column comment="" key="false" length="-1" name="ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
@@ -563,10 +578,79 @@
       <column comment="" defaultValue="" key="false" length="255" name="code" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="200" posY="240">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_1" show="false"/>
+    <elementParameter field="TEXT" name="COMPONENT_NAME" value="tWarn" show="false"/>
+    <elementParameter field="TEXT" name="VERSION" value="0.101 (ALPHA)" show="false"/>
+    <elementParameter field="TEXT" name="FAMILY" value="Logs_Errors" show="false"/>
+    <elementParameter field="CHECK" name="START" value="false" show="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" value="true" show="false"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="true" show="false"/>
+    <elementParameter field="TEXT" name="HELP" value="org.talend.help.tWarn" show="false"/>
+    <elementParameter field="DIRECTORY" name="IREPORT_PATH" value="" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Users\dhhf2167\Downloads\Talend-Studio-20250226_1030-V8.0.1\Talend-Studio-20250226_1030-V8.0.1\configuration\lib\java" show="false"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Connection OK&quot;"/>
+    <elementParameter field="TEXT" name="CODE" value="42"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="3"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tWarn_1"/>
+  </node>
+  <node componentName="tFileInputProperties" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="400" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputProperties_1" show="false"/>
+    <elementParameter field="TEXT" name="COMPONENT_NAME" value="tFileInputProperties" show="false"/>
+    <elementParameter field="TEXT" name="VERSION" value="0.102 (ALPHA)" show="false"/>
+    <elementParameter field="TEXT" name="FAMILY" value="File/Input" show="false"/>
+    <elementParameter field="CHECK" name="START" value="true" show="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" value="true" show="false"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HELP" value="org.talend.help.tFileInputProperties" show="false"/>
+    <elementParameter field="DIRECTORY" name="IREPORT_PATH" value="" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Users\dhhf2167\Downloads\Talend-Studio-20250226_1030-V8.0.1\Talend-Studio-20250226_1030-V8.0.1\configuration\lib\java" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="FILE_FORMAT" value="PROPERTIES_FORMAT"/>
+    <elementParameter field="CLOSED_LIST" name="RETRIVE_MODE" value="RETRIVE_BY_SECTION" show="false"/>
+    <elementParameter field="TEXT" name="SECTION_NAME" value="&quot;section&quot;" show="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/dhhf2167/Downloads/Talend-Studio-20250226_1030-V8.0.1/talend-config/context/context.properties&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileInputProperties_1">
+      <column defaultValue="" key="false" length="255" name="key" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="value" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tContextLoad" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="600" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tContextLoad_1" show="false"/>
+    <elementParameter field="TEXT" name="COMPONENT_NAME" value="tContextLoad" show="false"/>
+    <elementParameter field="TEXT" name="VERSION" value="0.101 (ALPHA)" show="false"/>
+    <elementParameter field="TEXT" name="FAMILY" value="Misc" show="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" value="false" show="false"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" value="false" show="false"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="true" show="false"/>
+    <elementParameter field="TEXT" name="HELP" value="org.talend.help.tContextLoad" show="false"/>
+    <elementParameter field="DIRECTORY" name="IREPORT_PATH" value="" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Users\dhhf2167\Downloads\Talend-Studio-20250226_1030-V8.0.1\Talend-Studio-20250226_1030-V8.0.1\configuration\lib\java" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="true"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="true"/>
+    <elementParameter field="CHECK" name="DIEONERROR" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tContextLoad_1">
+      <column defaultValue="" key="false" length="255" name="key" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="value" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
   <connection connectorName="COMPONENT_ERROR" label="OnComponentError" lineStyle="5" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tDie_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentError1" show="false"/>
   </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tFileList_1">
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tFileList_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tWarn_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
   </connection>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileInputDelimited_1">
@@ -619,9 +703,19 @@
       <elementValue elementRef="TRACE_COLUMN" value="nom_fichier" id="33"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="34"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="35"/>
+      <elementValue elementRef="TRACE_COLUMN" value="charge_le" id="36"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="37"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="38"/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="out" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFileInputProperties_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputProperties_1" target="tContextLoad_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputProperties_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputProperties_1" target="tDBConnection_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk3" show="false"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBConnection_1" show="false"/>
@@ -645,6 +739,16 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputProperties_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
