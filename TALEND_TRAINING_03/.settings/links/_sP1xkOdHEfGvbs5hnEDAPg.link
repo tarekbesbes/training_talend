@@ -1,0 +1,48 @@
+{
+  "itemId" : "_sP1xkOdHEfGvbs5hnEDAPg",
+  "contextList" : [ {
+    "contextName" : "Default",
+    "repoId" : "_Qlv68OgJEfGvbs5hnEDAPg",
+    "parameterList" : [ {
+      "id" : "_Tkot8OgJEfGvbs5hnEDAPg",
+      "name" : "FileDirectory"
+    }, {
+      "id" : "_UsN-0Oi-EfGvbs5hnEDAPg",
+      "name" : "CaisseFolder"
+    } ]
+  }, {
+    "contextName" : "Default",
+    "repoId" : "_EC99kOgOEfGvbs5hnEDAPg",
+    "parameterList" : [ {
+      "id" : "_EDlBmegOEfGvbs5hnEDAPg",
+      "name" : "CNX_SNOWFLAKE_dbSchema"
+    }, {
+      "id" : "_EDlBlegOEfGvbs5hnEDAPg",
+      "name" : "CNX_SNOWFLAKE_password"
+    }, {
+      "id" : "_EDlBmugOEfGvbs5hnEDAPg",
+      "name" : "CNX_SNOWFLAKE_database"
+    }, {
+      "id" : "_EDlBkegOEfGvbs5hnEDAPg",
+      "name" : "CNX_SNOWFLAKE_jdbcParameters"
+    }, {
+      "id" : "_EDlBkugOEfGvbs5hnEDAPg",
+      "name" : "CNX_SNOWFLAKE_userId"
+    }, {
+      "id" : "_EDlBk-gOEfGvbs5hnEDAPg",
+      "name" : "CNX_SNOWFLAKE_warehouse"
+    }, {
+      "id" : "_EDlBlOgOEfGvbs5hnEDAPg",
+      "name" : "CNX_SNOWFLAKE_jdbcUrlSuffix"
+    }, {
+      "id" : "_EDlBlugOEfGvbs5hnEDAPg",
+      "name" : "CNX_SNOWFLAKE_loginTimeout"
+    }, {
+      "id" : "_EDlBmOgOEfGvbs5hnEDAPg",
+      "name" : "CNX_SNOWFLAKE_role"
+    }, {
+      "id" : "_EDlBl-gOEfGvbs5hnEDAPg",
+      "name" : "CNX_SNOWFLAKE_account"
+    } ]
+  } ]
+}
